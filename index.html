@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <style>
+
+    body{
+      font-family: "Monaco", "Courier New", monospace;
+      font-weight: normal;
+      background: url('img/blurb.jpg') no-repeat fixed center;
+      background-size: cover;
+      align-items: center;
+      justify-content: center;
+      place-items: center;
+    }
+
+    #white-box{
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      /*text-align: center;*/
+    }
+
+    button{
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      min-width: max-content;
+      padding: 20px;
+      border: darkcyan 1px solid;
+      border-radius: 10px;
+      background-color: transparent;
+      font-size: 25px;
+    }
+    button:hover{
+      background-color: darkcyan;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const surveyLink = "https://forms.cloud.microsoft/e/hTLUxyisbv";
+      const surveyLink_2 = "https://forms.cloud.microsoft/e/DQYKzm2zKt";
+      const surveyLink_3 = "https://forms.cloud.microsoft/e/Hi1vC84SKS";
+      const surveyLink_4 = "https://forms.cloud.microsoft/e/9kELjyJBff";
+      const rand = Math.floor(Math.random() * 4) + 1;
+      let selectedLink, qr;
+      switch(rand) {
+        case 1:
+          selectedLink = surveyLink;
+          qr = "img/QRCode for Chess Commentary Evaluation_.png"
+          break;
+        case 2:
+          selectedLink = surveyLink_2;
+          qr = "img/QRCode for Chess Commentary Evaluation_(1).png"
+          break;
+        case 3:
+          selectedLink = surveyLink_3;
+          qr = "img/QRCode for Chess Commentary Evaluation_(2).png"
+          break;
+        case 4:
+          selectedLink = surveyLink_4;
+          qr = "img/QRCode for Chess Commentary Evaluation_(3).png"
+          break;
+      }
+      document.getElementById("qr").src = qr;
+      document.getElementById("survey").addEventListener("click", function() {
+        location.href = selectedLink;
+      });
+    });
+  </script>
+</head>
+
+<body>
+    <div id="white-box">
+      <div id="content" style="position: relative; display: flex; flex-direction: column; width: 100%;text-align: center; align-items: center; justify-content: center;">
+      <h1 style="float: left; margin-bottom: 0px;">Chess Commentary Evaluation</h1>
+        <h5 style="margin-top:5px;">Please click the button or scan the QR code to take the survey!</h5>
+        <h5 style="margin-top:5px;">All data collected in this survey is anonymous</h5>
+        <button id="survey" style="float: right;">Take Survey</button>
+        <img id="qr" style="width: 400px; margin-top: 20px;" alt="QR code for survey">
+      </div>
+      <hr>
+      <p>Thank you for taking the time to participate in this study. This survey should take approximately 15 minutes to complete.</p>
+      <h3>The Project</h3>
+      <p>
+        The generation and evaluation of natural language commentary has been the focus of a large number of studies in the era of LLMs. While we have a near-limitless amount of commentary on any and all subjects, generating text that is informative, clear, and accurate, and which also holds the attention of the reader is a task that has proven to be quite challenging. While LLMs are great at producing human-like text, they often struggle with accuracy, reasoning, long-term analysis, and so on.
+      </p>
+      <p>
+        Chess is a game that challenges all these aspects, and generating precise, engaging commentary is difficult for even state-of-the-art models. This project evaluates whether providing an LLM with move-by-move information on the features of the current game state can help bridge this gap in LLM commentary, and help players learn and improve on their own games with feature-rich, accurate move-level feedback.
+      </p>
+      <h3>The Study</h3>
+      <p>
+        Each of the moves presented in this study is from famous chess games commentated on by both LLMs and chess experts. In each of the following questions, you are given a board state with the move played, and 4 different comments related to the move. Please rank the commentary in your order of preference, with rank 1 being your most preferred comment.
+      </p>
+      <p>
+        Each move will also be accompanied with 3 additional questions, whereby you will be asked to rank the 4 commentaries on informativeness and clarity, and assess whether you find the information presented in each commentary to be accurate. If you have any additional feedback on the comments, there will be a space provided after every question where you may provide any such feedback.
+      </p>
+      <br>
+      <p>
+        This survey is completely anonymous, and it is approved by the University of Edinburgh Ethics Committee (reference: 727415). Please take a few minutes to read the following Participant Information Sheet and Participant Consent Form before proceeding:
+      </p>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 40px;">
+        <a href="https://drive.google.com/file/d/1qtws939CuIHeAZVNsJePn-gKT9V83mRy/view?usp=sharing">
+          <button type="button" style="font-size: 18px">Participant Information Sheet</button>
+          </a>
+          <a href="https://drive.google.com/file/d/1R1po09ZqvHU8IDN4UeEy_NlXG4qmTjNb/view?usp=drive_link">
+          <button type="button" style="font-size: 18px">Participant Consent Form</button>
+        </a>
+        </div>
+      <p>
+        If you have any questions about the project or this survey, please contact Harsh Goel at <a href="mailto:s2276852@ed.ac.uk">s2276852@ed.ac.uk</a>
+      </p>
+    </div>
+</body>
+
+</html>
