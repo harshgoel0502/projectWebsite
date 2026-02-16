@@ -21,7 +21,14 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
   <style>
-
+    #button-box{
+      flex-direction: row;
+    }
+    @media only screen and (max-device-width: 700px) {
+      #button-box{
+        flex-direction: column;
+      }
+    }
     body{
       font-family: "Monaco", "Courier New", monospace;
       font-weight: normal;
@@ -100,7 +107,7 @@
         <h5 style="margin-top:5px;">Please click the button or scan the QR code to take the survey!</h5>
         <h5 style="margin-top:5px;">All data collected in this survey is anonymous</h5>
         <button id="survey" style="float: right;">Take Survey</button>
-        <img id="qr" style="width: 400px; margin-top: 20px;" alt="QR code for survey">
+        <img id="qr" style="width: 20%; min-width: 200px; margin-top: 20px;" alt="QR code for survey">
       </div>
       <hr>
       <p>Thank you for taking the time to participate in this study. This survey should take approximately 15 minutes to complete.</p>
@@ -122,7 +129,7 @@
       <p>
         This survey is completely anonymous, and it is approved by the University of Edinburgh Ethics Committee (reference: 727415). Please take a few minutes to read the following Participant Information Sheet and Participant Consent Form before proceeding:
       </p>
-        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 40px;">
+        <div id="button-box" style="display: flex;align-items: center; justify-content: center; gap: 40px;">
         <a href="https://drive.google.com/file/d/1qtws939CuIHeAZVNsJePn-gKT9V83mRy/view?usp=sharing">
           <button type="button" style="font-size: 18px">Participant Information Sheet</button>
           </a>
