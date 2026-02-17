@@ -72,7 +72,8 @@
       const surveyLink_2 = "https://forms.cloud.microsoft/e/DQYKzm2zKt";
       const surveyLink_3 = "https://forms.cloud.microsoft/e/Hi1vC84SKS";
       const surveyLink_4 = "https://forms.cloud.microsoft/e/9kELjyJBff";
-      const rand = Math.round(Math.random() * 3);
+      const rand = Math.abs(Math.round((Math.random() * 4) - 0.5));
+      console.log(rand)
       let selectedLink, qr;
       switch(rand) {
         case 0:
